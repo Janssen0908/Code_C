@@ -34,7 +34,7 @@ void game()
 
 		//≈– ‰”Æ
 	    ret = IsWin(board,ROW,COL);
-		if (ret == '*' || ret == '#' || ret == 'c')
+		if (ret != 'c')
 		{
 			break;
 		}
@@ -42,8 +42,13 @@ void game()
 		ComputerMove(board,ROW,COL);
 		DisplayBoard(board, ROW, COL);//‘Ÿ¥Œ¥Ú”°∆Â≈Ã
 
-	    //≈– ‰”Æ
 
+	    //≈– ‰”Æ
+		ret = IsWin(board, ROW, COL);
+		if (ret != 'c')
+		{
+			break;
+		}
 	}
 	if (ret == '*')
 		printf("ÕÊº“”Æ¡À£°\n");

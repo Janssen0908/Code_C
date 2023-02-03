@@ -82,6 +82,7 @@ void playerMove(char board[ROW][COL], int row, int col)
 }
 
 
+
 //电脑下棋（随机下棋）
 void ComputerMove(char board[ROW][COL], int row, int col)
 {
@@ -114,82 +115,122 @@ int IsFull(char board[ROW][COL], int row, int col)
 			    return 0;
 		}
 	}
+
 	return 1;
 }
 
 
 
 //判输赢
+//char IsWin(char board[ROW][COL], int row, int col)
+//{
+//
+//
+//	//判断行
+//	int i = 0;
+//	for (i = 0; i < row; i++)
+//	{
+//		int player = 0;
+//		int computer = 0;
+//
+//		int j = 0;
+//		for (j = 0; j < col; j++)
+//		{
+//			if (board[i][j] == '*')
+//				player++;
+//			else if (board[i][j] == '#')
+//				computer++;
+//		}
+//
+//		if ((player == row && board[i][1] != ' ') || (computer == col && board[i][1] != ' '))
+//			return board[i][1];
+//	}
+//
+//	//判断列
+//	for (i = 0; i < col; i++)
+//	{
+//		int player = 0;
+//		int computer = 0;
+//
+//		int j = 0;
+//		for (j = 0; j < row; j++)
+//		{
+//			if (board[i][j] == '*')
+//				player++;
+//			else if (board[i][j] == '#')
+//				computer++;
+//		}
+//
+//		if ((player == row && board[1][i] != ' ') || (computer == col && board[1][i] != ' '))
+//			return board[1][i];
+//	}
+//
+//	//判断对角线
+//	int order = 0;
+//	int reverse = 0;
+//	for (i = 0; i < row; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < col; j++)
+//		{
+//			if ((i = j) && ((board[i][j] == '*') || (board[i][j] == '#')))
+//				order++;
+//			else if (j - i == 1 && ((board[i][j] == '*') || (board[i][j] == '#')))
+//				reverse++;
+//		}
+//	}
+//	if (order == row && board[1][1] != ' ')
+//		return board[1][1];
+//
+//
+//
+//    //判断平局
+//	//如果棋盘满了返回1，不满返回0；
+//
+//	int num = IsFull(board, ROW, COL);
+//	if (num == 1)
+//	{
+//		return 'q';
+//	}
+//	else
+//		return 'c';
+//}
+
 char IsWin(char board[ROW][COL], int row, int col)
 {
 
-
-	//判断行
+	//判断三行
 	int i = 0;
 	for (i = 0; i < row; i++)
 	{
-		int player = 0;
-		int computer = 0;
-
-		int j = 0;
-		for (j = 0; j < col; j++)
+		if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][1] != ' ')
 		{
-			if (board[i][j] == '*')
-				player++;
-			else if (board[i][j] == '#')
-				computer++;
-		}
-
-		if ((player == row && board[i][1] != ' ') || (computer == col && board[i][1] != ' '))
 			return board[i][1];
+		}
 	}
 
-	//判断列
+	//判断三列
 	for (i = 0; i < col; i++)
 	{
-		int player = 0;
-		int computer = 0;
-
-		int j = 0;
-		for (j = 0; j < row; j++)
+		if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[1][i] != ' ')
 		{
-			if (board[i][j] == '*')
-				player++;
-			else if (board[i][j] == '#')
-				computer++;
-		}
-
-		if ((player == row && board[1][i] != ' ') || (computer == col && board[1][i] != ' '))
 			return board[1][i];
+		}
 	}
+
 
 	//判断对角线
-	int order = 0;
-	int reverse = 0;
-	for (i = 0; i < row; i++)
-	{
-		int j = 0;
-		for (j = 0; j < col; j++)
-		{
-			if ((i = j) && ((board[i][j] == '*') || (board[i][j] == '#')))
-				order++;
-			else if (j - i == 1 && ((board[i][j] == '*') || (board[i][j] == '#')))
-				reverse++;
-		}
-	}
-	if (order == row && board[1][1] != ' ')
+	if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
 		return board[1][1];
+	else if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != ' ')
+		return board[0][2];
 
-
-
-    //判断平局
-	//如果棋盘满了返回1，不满返回0；
-
-	int num = IsFull(board, ROW, COL);
-	if (num == 1)
+	//判断平局
+	int ret = IsFull(board, ROW, COL);
+	if (ret == 1)
 	{
-		return 'c';
+		return 'q';
 	}
 	else
-		return 'Q';
+		return 'c';
 }

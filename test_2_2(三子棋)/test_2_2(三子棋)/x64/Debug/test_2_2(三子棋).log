@@ -1,2 +1,5 @@
 ﻿  game.c
-  test_2_2(三子棋).vcxproj -> F:\vs\gitee_c\test_2_2(三子棋)\x64\Debug\test_2_2(三子棋).exe
+  test.c
+  正在生成代码...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1092,5): error MSB6006: “link.exe”已退出，代码为 1168。
+LINK : fatal error LNK1168: 无法打开 F:\vs\gitee_c\test_2_2(三子棋)\x64\Debug\test_2_2(三子棋).exe 进行写入
