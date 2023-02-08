@@ -1,0 +1,3 @@
+﻿  tset.c
+F:\vs\gitee_c\test_2_8t\test_2_8t\tset.c(35,1): warning C4305: “初始化”: 从“double”到“float”截断
+  test_2_8t.vcxproj -> F:\vs\gitee_c\test_2_8t\x64\Debug\test_2_8t.exe
