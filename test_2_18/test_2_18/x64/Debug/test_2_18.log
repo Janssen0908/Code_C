@@ -1,0 +1,6 @@
+﻿  test.c
+F:\vs\gitee_c\test_2_18\test_2_18\test.c(203,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64”
+F:\vs\gitee_c\test_2_18\test_2_18\test.c(203,9): message : 请考虑在格式字符串中使用“%lld”
+F:\vs\gitee_c\test_2_18\test_2_18\test.c(203,9): message : 请考虑在格式字符串中使用“%Id”
+F:\vs\gitee_c\test_2_18\test_2_18\test.c(203,9): message : 请考虑在格式字符串中使用“%I64d”
+  test_2_18.vcxproj -> F:\vs\gitee_c\test_2_18\x64\Debug\test_2_18.exe
