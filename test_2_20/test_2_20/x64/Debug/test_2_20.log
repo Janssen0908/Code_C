@@ -1,0 +1,4 @@
+﻿  test.c
+F:\vs\gitee_c\test_2_20\test_2_20\test.c(1,1): warning C4828: 文件包含在偏移 0x1cd 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+F:\vs\gitee_c\test_2_20\test_2_20\test.c(10,10): warning C4098: “test”:“void”函数返回值
+  test_2_20.vcxproj -> F:\vs\gitee_c\test_2_20\x64\Debug\test_2_20.exe
