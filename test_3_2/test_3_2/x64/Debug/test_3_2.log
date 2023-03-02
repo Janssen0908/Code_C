@@ -1,0 +1,4 @@
+﻿  test.c
+F:\vs\gitee_c\test_3_2\test_3_2\test.c(15,9): warning C4477: “printf”: 格式字符串“%p”需要类型“void *”的参数，但可变参数 1 拥有了类型“int”
+F:\vs\gitee_c\test_3_2\test_3_2\test.c(15,9): warning C4313: "printf": 格式字符串中的 "%p" 与类型为 "int" 的参数 1 冲突
+  test_3_2.vcxproj -> F:\vs\gitee_c\test_3_2\x64\Debug\test_3_2.exe
