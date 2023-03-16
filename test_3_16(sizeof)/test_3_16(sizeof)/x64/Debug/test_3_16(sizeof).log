@@ -1,0 +1,36 @@
+﻿  test.c
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(15,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(15,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(16,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(16,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(17,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(17,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(18,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(18,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(19,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(19,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(21,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(21,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(22,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(22,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(23,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(23,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(24,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(24,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(25,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(25,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(32,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(32,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(33,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(33,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(34,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(34,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(35,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(35,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(36,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(36,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(37,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(37,9): message : 请考虑在格式字符串中使用“%zd”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(38,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\vs\gitee_c\test_3_16(sizeof)\test_3_16(sizeof)\test.c(38,9): message : 请考虑在格式字符串中使用“%zd”
+  test_3_16(sizeof).vcxproj -> F:\vs\gitee_c\test_3_16(sizeof)\x64\Debug\test_3_16(sizeof).exe
