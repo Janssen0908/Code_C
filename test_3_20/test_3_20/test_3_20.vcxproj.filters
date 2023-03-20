@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="strstr.c">
+    <ClCompile Include="strtok.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="strtok.c">
+    <ClCompile Include="errno.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
