@@ -1,0 +1,3 @@
+﻿  contact.c
+F:\vs\gitee_c\test_3_22(soft)\test_3_22(soft)\contact.c(174,9): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
+  test_3_22(soft).vcxproj -> F:\vs\gitee_c\test_3_22(soft)\x64\Debug\test_3_22(soft).exe
