@@ -2,25 +2,90 @@
 
 #include "contact.h"
 
+
+
+//静态版本
+//void InitContact(Contact* pc)
+//{
+//	pc->sz = 0;
+//	memset(pc->data, 0, sizeof(pc->data));//内存设置
+//	//                       1000的数组名，计算的是整个数组的大小
+//
+//}
+
+
+
+
+//动态版本
+
 void InitContact(Contact* pc)
 {
+	pc->data =(PeoInfo*) malloc(DEFAULT_SZ * (sizeof(PeoInfo)));
+	if (pc->data == NULL)
+	{
+		perror("InitContact");
+		return;
+	}
 	pc->sz = 0;
-	memset(pc->data, 0, sizeof(pc->data));//内存设置
-	//                       1000的数组名，计算的是整个数组的大小
-
+	pc->capacity = DEFAULT_SZ;
 }
 
 
+
+
+//静态版本Add
+//void AddContact(Contact* pc)
+//{
+//	//先判满
+//	if (pc->sz == MAX_Peo)
+//	{
+//		printf("通讯录已满！\n");
+//		return;
+//	}
+//
+//		//录入信息
+//
+//	printf("请输入名字：_>");//放在通讯录下标为sz的位置上
+//	scanf("%s", pc->data[pc->sz].name);
+//	printf("请输入年龄：_>");
+//	scanf("%d", &(pc->data[pc->sz].age));
+//	printf("请输入性别：_>");
+//	scanf("%s", pc->data[pc->sz].sex);
+//	printf("请输入电话：_>");
+//	scanf("%s", pc->data[pc->sz].tele_number);
+//	printf("请输入地址：_>");
+//	scanf("%s", pc->data[pc->sz].addr);
+//	pc->sz++;
+//	printf("增加成功\n");
+//
+//}
+
+
+
+
+//动态版本Add
 void AddContact(Contact* pc)
 {
-	//先判满
-	if (pc->sz == MAX_Peo)
+	//满了增容
+	if (pc->sz == pc->capacity)
 	{
-		printf("通讯录已满！\n");
-		return;
+		PeoInfo* ret = (PeoInfo*)realloc(pc->data, (pc->capacity + INC_SZ) * sizeof(PeoInfo));
+		if (ret != NULL)
+		{
+			pc->data = ret;
+			pc->capacity = pc->capacity + INC_SZ;//容量也增加
+			printf("增容成功\n");
+		}
+		else
+		{
+			perror("AddContact");
+			perror("增容失败\n");
+			return;
+		}
+
 	}
 
-		//录入信息
+	//录入信息
 
 	printf("请输入名字：_>");//放在通讯录下标为sz的位置上
 	scanf("%s", pc->data[pc->sz].name);
@@ -36,7 +101,6 @@ void AddContact(Contact* pc)
 	printf("增加成功\n");
 
 }
-
 
 
 void PrintContact(const Contact* pc)
@@ -196,3 +260,12 @@ void SortContact(Contact* pc)
 	}
 }
 
+
+
+void DestoryContact(Contact* pc)
+{
+	free(pc->data);
+	pc->data = NULL;
+	pc->sz = 0;
+	pc->capacity = 0;
+}

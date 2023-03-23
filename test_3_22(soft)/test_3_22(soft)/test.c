@@ -37,6 +37,8 @@ int main()
 
 
 	InitContact(&con);
+	//初始化+给data申请空间在堆区
+	//sz=0;capacity=当前最大空间
 	
 	do
 	{
@@ -46,6 +48,7 @@ int main()
 		switch (input)
 		{
 		case EXIT:
+			DestoryContact(&con);
 			printf("退出通讯录\n");
 			break;
 		case ADD:
