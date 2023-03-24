@@ -42,12 +42,14 @@ int main()
 	
 	do
 	{
+
 		menu();
 		printf("请选择：_>");
 		scanf("%d", &input);
 		switch (input)
 		{
 		case EXIT:
+			SaveContact(&con);
 			DestoryContact(&con);
 			printf("退出通讯录\n");
 			break;

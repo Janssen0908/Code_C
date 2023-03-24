@@ -61,5 +61,9 @@ void SortContact(Contact* pc);
 
 void DestoryContact(Contact* pc);
 
+void SaveContact(Contact* pc);
+
+void LoadContact(Contact* pc);
 
 
+void Check_capacity(Contact* pc);

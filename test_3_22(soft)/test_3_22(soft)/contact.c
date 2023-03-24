@@ -18,6 +18,48 @@
 
 //动态版本
 
+void Check_capacity(Contact* pc)
+{
+	if (pc->sz == pc->capacity)
+	{
+		PeoInfo* ret = (PeoInfo*)realloc(pc->data, (pc->capacity + INC_SZ) * sizeof(PeoInfo));
+		if (ret != NULL)
+		{
+			pc->data = ret;
+			pc->capacity = pc->capacity + INC_SZ;//容量也增加
+			printf("增容成功\n");
+		}
+		else
+		{
+			perror("AddContact");
+			perror("增容失败\n");
+			return;
+		}
+
+	}
+}
+
+void LoadContact(Contact* pc)
+{
+	FILE* pf = fopen("Contact.dat", "r");
+	if (pf == NULL)
+	{
+		perror("fopen");
+		return;
+	}
+
+	PeoInfo tmp = { 0 };
+	while (fread(&tmp, sizeof(PeoInfo), 1, pf))
+	{
+		//复制信息到Contact中首先应当考虑增容的问题
+		Check_capacity(pc);
+		pc->data[pc->sz] = tmp;
+		pc->sz++;
+	}
+	fclose(pf);
+	pf = NULL;
+}
+
 void InitContact(Contact* pc)
 {
 	pc->data =(PeoInfo*) malloc(DEFAULT_SZ * (sizeof(PeoInfo)));
@@ -28,6 +70,10 @@ void InitContact(Contact* pc)
 	}
 	pc->sz = 0;
 	pc->capacity = DEFAULT_SZ;
+
+	//加载文件
+
+	LoadContact(pc);
 }
 
 
@@ -67,23 +113,7 @@ void InitContact(Contact* pc)
 void AddContact(Contact* pc)
 {
 	//满了增容
-	if (pc->sz == pc->capacity)
-	{
-		PeoInfo* ret = (PeoInfo*)realloc(pc->data, (pc->capacity + INC_SZ) * sizeof(PeoInfo));
-		if (ret != NULL)
-		{
-			pc->data = ret;
-			pc->capacity = pc->capacity + INC_SZ;//容量也增加
-			printf("增容成功\n");
-		}
-		else
-		{
-			perror("AddContact");
-			perror("增容失败\n");
-			return;
-		}
-
-	}
+	Check_capacity(pc);
 
 	//录入信息
 
@@ -268,4 +298,25 @@ void DestoryContact(Contact* pc)
 	pc->data = NULL;
 	pc->sz = 0;
 	pc->capacity = 0;
+}
+
+
+void SaveContact(Contact* pc)
+{
+	FILE* pf = fopen("Contact.dat", "w");
+	if (pf == NULL)
+	{
+		perror("fopen");
+		return;
+	}
+
+	//写文件
+	int i = 0;
+	for (i = 0; i < pc->sz; i++)
+	{
+		fwrite(pc->data + i, sizeof(PeoInfo), 1, pf);
+	}
+
+	fclose(pf);
+	pf = NULL;
 }
